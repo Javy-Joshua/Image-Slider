@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.slider {
+  inline-size: 800px;
+  block-size: 600px;
+  overflow: hidden;
+  position: relative;
+  margin: 20px auto;
+  background: lawngreen;
+}
+
+.slider-inner {
+  overflow: hidden;
+  position: relative;
+  inline-size: 500%;
+  margin: 0;
+  left: 0;
+  animation: slider 20s infinite;
+}
+
+.slider-item {
+  flex: 1;
+  inline-size: 100%;
+}
+
+.slider-item img {
+  float: left;
+  inline-size: 20%;
+  /* object-fit: contain; */
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+/* if you have 5 images the .slider-inner width will be 500%. ...100% * (no of images) and then the image width will be 100/(no of images)% */
